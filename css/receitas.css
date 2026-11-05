@@ -1,0 +1,100 @@
+/*
+- um creme claro para o fundo da página; #FEECCD
+- um marrom-escuro para o texto; #663C00 (tambem é a cor dos links visitados)
+- um terracota (laranja-avermelhado queimado) para os títulos e os links. #9E5C00
+
+ingredientes e passos: 1.5rem = 24px; se mantem visivelmente maior, mas sem competir com o resto, principalmente h´s.
+informação data, autoria e legenda: 0.875 = 14px.
+
+fundo: #FEECCD com texto: #663C00, 8.18:1 pontos, passa em tudo;
+fundo: #FEECCD com texto: #9E5C00, 4.54:1 passa na maioria, reprova apenas em aaa para texto normal.
+*/
+
+
+
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #9E5C00;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #663C00;
+    background-color: #FEECCD;
+}
+
+article li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+strong {
+    color: #9E5C00;
+}
+
+.data-autoria, li figure figcaption {
+    font-size: 0.875rem;
+}
+
+a {
+    color:#9E5C00;
+}
+section li a:visited {
+    color: #663C00;
+}
+a:focus-visible {
+    outline: 3px solid #663C00;
+    outline-offset: 2px;
+}
+
+/*1. Todas as caixas medem até a borda.
+2. O `main` é uma coluna de leitura centralizada. No computador, as linhas não ficam compridas demais. No celular, o texto não encosta nas laterais da tela. Você escolhe a largura máxima (em `rem`) e o respiro.
+3. A foto do bolo nunca passa da coluna e não distorce.
+4. A foto do ponto da cobertura, dentro do passo 4, tem no máximo 20rem de largura no computador e fica centralizada no espaço do passo. No celular, ela encolhe junto com o passo, sem passar dele e sem distorcer.
+5. O aviso "Não abra o forno…" (o `strong` do passo 3) ganha fundo `#663C00` e texto `#FEECCD`, com um pouco de fundo além das letras nos quatro lados. As linhas de cima e de baixo do passo **não** se afastam por causa dele.
+6. As receitas relacionadas viram botões lado a lado: cada uma com borda `2px solid #9E5C00`, respiro interno, largura do tamanho do texto e um pouco de distância entre elas. A lista fica sem o recuo da esquerda. Quando os dois botões não cabem na mesma linha, o segundo desce inteiro para a linha de baixo.
+7. O link "← Ver todas as receitas" vira um botão fácil de acertar com o dedo: fundo `#663C00`, texto `#FEECCD`, 1rem de respiro interno em cima e embaixo, e o fundo ocupa a largura toda da coluna.
+ */
+
+ * {
+    box-sizing: border-box;;
+ }
+ main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3rem;
+ }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+li figure {
+    max-width: 20rem;
+    height: auto;
+    margin: 0 auto;
+}
+li strong {
+    background-color: #663C00;
+    color: #FEECCD;
+    padding: 0.5rem;
+}
+.receita {
+    display: inline-block;
+}
+h3 a {
+    border: 2px solid #9E5C00;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+ul, ol {
+    padding: 0;
+}
+.botao {
+    display: block;
+    background-color: #663C00;
+    color: #FEECCD;
+    padding: 1rem 0;
+
+}
